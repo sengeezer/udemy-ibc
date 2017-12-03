@@ -17,5 +17,9 @@ function reverse(str) {
 
 // could have done
 // return [...str].reverse().join('');
+// or:
+// for (let char of str) { newstr = char + newstr };
+// or:
+// return [...str].reduce((newstr, char) => { return char + nestr; }, '');
 
 module.exports = reverse;
