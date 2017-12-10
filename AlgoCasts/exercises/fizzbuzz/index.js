@@ -12,6 +12,27 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+  const numbers = [];
+  let i;
+  for (i = 1; i < n + 1; i++) {
+    numbers.push(i);
+  }
+
+  numbers.forEach((num) => {
+    if (num % 3 === 0 && num % 5 === 0) {
+      console.log('fizzbuzz');
+    } else if (num % 5 === 0) {
+      console.log('buzz');
+    } else if (num % 3 === 0) {
+      console.log('fizz');
+    } else {
+      console.log(num);
+    }
+  });
+}
+
+// alternative:
+// check numbers inside for loop
 
 module.exports = fizzBuzz;
