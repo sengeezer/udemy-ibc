@@ -17,10 +17,18 @@
   "author": "Fabio M. Albertin <fabio@albertin.co.uk> (http://ifab.io/)",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.11.0",
+    "eslint": "^4.18.1",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.5.1"
-  }
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sengeezer/udemy-ibc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sengeezer/udemy-ibc/issues"
+  },
+  "homepage": "https://github.com/sengeezer/udemy-ibc#readme"
 }
