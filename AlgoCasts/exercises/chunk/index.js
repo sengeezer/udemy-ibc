@@ -8,7 +8,8 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk1(arr, size) {
+// My version of solution 1
+function chunk2(arr, size) {
   const chunkd = [];
   arr.forEach((el) => {
     const last = chunkd[chunkd.length - 1];
@@ -18,9 +19,27 @@ function chunk1(arr, size) {
       last.push(el);
     }
   });
+
+  return chunkd;
 }
 
-function chunk0(array, size) {
+// SG version of solution 1
+function chunk(array, size) {
+  const chunked = [];
+  for (let element of array) {
+    const last = chunked[chunked.length - 1];
+    if (!last || last.length === size) {
+      chunked.push([element]);
+    } else {
+      last.push(element);
+    }
+  }
+
+  return chunked;
+}
+
+// My clever solution
+function chunk1(array, size) {
   const chunks = [];
   while (array.length > 0) {
     chunks.push(array.slice(0, size));
@@ -28,7 +47,20 @@ function chunk0(array, size) {
   return chunks;
 }
 
-function chunk(array, size) {
+// SG (working) version
+function chunk3(array, size) {
+  const chunks = [];
+  let idxStart = 0;
+  while (idxStart < array.length) {
+    chunks.push(array.slice(idxStart, idxStart + size));
+    idxStart += size;
+  }
+
+  return chunks;
+}
+
+// Original first attempt
+function chunk0(array, size) {
   const resArr = [];
   const tmpArr = [];
   const extraEls = array.length % size;
@@ -40,8 +72,8 @@ function chunk(array, size) {
     const element = array[i];
     if (tmpArr.length < size + 1) {
       tmpArr.push(element);
-    } 
+    }
   }
 }
 
-module.exports = chunk;
+module.exports = chunk3;
