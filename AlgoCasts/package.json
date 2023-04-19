@@ -17,7 +17,7 @@
   "author": "Fabio M. Albertin <fabio@albertin.co.uk> (http://ifab.io/)",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.18.1",
+    "eslint": "^8.38.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
